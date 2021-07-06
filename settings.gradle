@@ -1,0 +1,3 @@
+include ':eightlib'
+include ':app'
+rootProject.name = "Eight"
