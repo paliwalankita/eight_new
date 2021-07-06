@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/black_one"
+    android:orientation="vertical"
+    tools:context=".CommunityMainActivity">
+
+    <LinearLayout
+        android:id="@+id/actionButtonLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shadowElevation="1dp"
+            app:neumorph_shapeAppearance="@style/ShapeAppearance"
+            app:neumorph_shapeType="flat">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search"
+                android:contentDescription="TODO" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shadowElevation="1dp"
+            app:neumorph_shapeAppearance="@style/ShapeAppearance"
+            app:neumorph_shapeType="flat">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_notification" />
+        </soup.neumorphism.NeumorphCardView>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/stationsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actionButtonLL"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:lineSpacingExtra="5sp"
+            android:text="Stations that your friends are tuned to"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stationsRecView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stationsText" />
+
+        <TextView
+            android:id="@+id/fav_stationsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stationsRecView"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:lineSpacingExtra="5sp"
+            android:text="Your favourite stations"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fav_stationsRecView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fav_stationsText" />
+
+        <TextView
+            android:id="@+id/like_stationsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fav_stationsRecView"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:lineSpacingExtra="5sp"
+            android:text="Stations you make like"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/like_stationsRecView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/like_stationsText" />
+
+</RelativeLayout>
